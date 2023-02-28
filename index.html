@@ -1,0 +1,30 @@
+<html>
+<header>
+   <title>Privacy Helper</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+</header>
+<body>
+    <select name="size" id="size">
+        <option>Large</option>
+        <option>Medium</option>
+        <option>Small</option>
+    </select>
+    <select name="industry" id="industry">
+        <option>Social Media</option>
+        <option>Ecommerce</option>
+        <option>Food</option>
+        <option>Finance</option>
+    </select>
+    <select name="country" id="country">
+        <option>United States</option>
+        <option>China</option>
+        <option>Japan</option>
+    </select>
+    <form id="fileForm">
+        <input type="file" id="csvFile" accept=".csv" />
+        <br />
+        <input type="submit" value="Submit" />
+     </form>
+    <script src="calculate.js"></script>
+</body>
+</html>
