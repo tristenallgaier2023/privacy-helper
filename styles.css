@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.select-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+select {
+    font-size: large;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    border-radius: 2px;
+}
+
+#fileForm > input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+select:hover, #fileForm > input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(185, 185, 185);
+    transition: ease-in-out 0.2s;
+}
+
+#fileForm > input[type="submit"] {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#fileForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fileForm > input {
+    font-size: large;
+    border-radius: 5px;
+    padding: 5px 5px;
+}

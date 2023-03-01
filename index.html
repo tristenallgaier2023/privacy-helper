@@ -4,27 +4,32 @@
    <link rel="stylesheet" type="text/css" href="styles.css"/>
 </header>
 <body>
-    <select name="size" id="size">
-        <option>Large</option>
-        <option>Medium</option>
-        <option>Small</option>
-    </select>
-    <select name="industry" id="industry">
-        <option>Social Media</option>
-        <option>Ecommerce</option>
-        <option>Food</option>
-        <option>Finance</option>
-    </select>
-    <select name="country" id="country">
-        <option>United States</option>
-        <option>China</option>
-        <option>Japan</option>
-    </select>
-    <form id="fileForm">
-        <input type="file" id="csvFile" accept=".csv" />
-        <br />
-        <input type="submit" value="Submit" />
-     </form>
+    <div class="select-container">
+        <div class="drop-downs">
+            <select name="size" id="size">
+                <option>Large</option>
+                <option>Medium</option>
+                <option>Small</option>
+            </select>
+            <select name="industry" id="industry">
+                <option>Social Media</option>
+                <option>Ecommerce</option>
+                <option>Food</option>
+                <option>Finance</option>
+            </select>
+            <select name="country" id="country">
+                <option>United States</option>
+                <option>China</option>
+                <option>Japan</option>
+            </select>
+        </div>
+        <form id="fileForm">
+            <input type="file" id="csvFile" accept=".csv" />
+            <br />
+            <input type="submit" value="Submit" />
+         </form>
+    </div>
+
     <script src="calculate.js"></script>
 </body>
 </html>
