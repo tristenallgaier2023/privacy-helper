@@ -6,6 +6,7 @@ const rowSize = numCategories + numAttributes + 2
 const expectedThreshold = 0.5
 let categories
 let attributes
+var li_s
 
 fileForm.addEventListener("submit", function (e) {
     e.preventDefault()
@@ -13,6 +14,9 @@ fileForm.addEventListener("submit", function (e) {
     const reader = new FileReader()
     reader.onload = calculateBenchmark
     reader.readAsText(input)
+    console.log(reader)
+    console.log('result')
+    console.log(reader.result)
 })
 
 function calculateBenchmark(e) {
@@ -22,10 +26,24 @@ function calculateBenchmark(e) {
     attributes = rawData.slice(2 + numCategories, rowSize)
     rows = getRows(rawData.slice(rowSize))
     expectedAttributes = findExpectedAttributes(rows)
-    console.log(expectedAttributes)
+    li_s = expectedAttributes
+    update_lis(expectedAttributes)
+}
+
+function update_lis(expectedAttributes) {
+    var str = ""
+    for (var i = 0; i < expectedAttributes.length; i++) {
+        str += "<li>" + expectedAttributes[i] + "</li>"
+    }
+
+    // get the ul by class "the_modifiable_list"
+    var ul = document.getElementsByClassName("the_modifiable_list")[0]
+    //insert the string into it
+    ul.innerHTML = str
 }
 
 function parseCSV(text) {
+    let rows = text.split("\r\n").join(",")
     return text.split("\r\n").join(",").split(",")
 }
 

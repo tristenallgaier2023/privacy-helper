@@ -23,11 +23,19 @@
                 <option>Japan</option>
             </select>
         </div>
-        <form id="fileForm">
-            <input type="file" id="csvFile" accept=".csv" />
-            <br />
-            <input type="submit" value="Submit" />
-         </form>
+        <!-- <div class="fileFormWrapper" style="display: flex; width: 50%; box-sizing: border-box; padding: 0px;"> -->
+            <form id="fileForm">
+                <input type="file" id="csvFile" accept=".csv" style="flex: 1;"/>
+                <br style="flex: 1;"/>
+                <input type="submit" value="Submit" />
+             </form>
+        <!-- </div> -->
+        <div class="wrapperForList">
+            <ul class="the_modifiable_list">
+                
+            </ul>
+        </div>
+        
     </div>
 
     <script src="calculate.js"></script>
